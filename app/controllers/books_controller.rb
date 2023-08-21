@@ -28,7 +28,7 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    if @book.update(book_params) # 後ろに引数を
+    if @book.update(book_params) # 後ろに引数を指定 
       flash[:notice] = "Book was successfully updated."
       redirect_to book_path(@book.id)
     else
